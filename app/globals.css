@@ -25,3 +25,31 @@ button,input,textarea{font:inherit}
 @keyframes watermark-drift{0%{transform:translate(-12%,8%) rotate(-20deg)}100%{transform:translate(12%,-8%) rotate(-20deg)}}
 ::selection{background:#cce8d1;color:#174b31}
 @media(max-width:640px){.container{width:calc(100% - 28px)}.section{padding:58px 0}}
+
+
+/* Responsive foundation */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+img,video,iframe,canvas,svg{max-width:100%}
+button,a,input,textarea,select{-webkit-tap-highlight-color:transparent}
+button,a{touch-action:manipulation}
+input,textarea,select{font-size:16px}
+.container{min-width:0}
+main{min-width:0}
+.card{min-width:0}
+@media(max-width:768px){
+  .container{width:calc(100% - 32px)}
+  .section{padding:58px 0}
+  h1{overflow-wrap:anywhere}
+  .card{border-radius:16px}
+  table{display:block;max-width:100%;overflow-x:auto}
+}
+@media(max-width:520px){
+  .container{width:calc(100% - 28px)}
+  .section{padding:46px 0}
+  .btn{min-height:44px;padding:11px 14px}
+  .field{min-height:46px}
+  h1{font-size:clamp(34px,10vw,48px)!important}
+  h2{overflow-wrap:anywhere}
+  /* Keep fixed controls clear of the iPhone home indicator. */
+  .academy-support{right:12px!important;bottom:calc(12px + env(safe-area-inset-bottom))!important}
+}
