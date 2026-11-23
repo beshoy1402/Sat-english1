@@ -19,7 +19,7 @@
     "hls.js": "^1.6.13",
     "lucide-react": "^0.468.0",
     "next": "15.5.29",
-    "next-auth": "5.0.0-beta.30",
+    "next-auth": "5.0.0-beta.32",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "zod": "^4.1.12"
@@ -40,5 +40,10 @@
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
+  },
+  "overrides": {
+    "postcss": "8.5.23",
+    "deepmerge-ts": "8.0.0",
+    "effect": "3.22.1"
   }
 }
