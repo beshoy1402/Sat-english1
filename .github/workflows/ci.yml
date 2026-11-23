@@ -22,5 +22,6 @@ jobs:
         continue-on-error: true
       - run: npx prisma validate
       - run: npm run db:push
+      - run: npm run db:seed
       - run: npm run typecheck
       - run: npm run build
