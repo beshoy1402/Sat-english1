@@ -17,6 +17,19 @@ model User {
   enrollments       Enrollment[]
   progress          LessonProgress[]
   orders            PaymentOrder[]
+  devices           DeviceSession[]
+}
+model DeviceSession {
+  id         String @id @default(cuid())
+  userId     String
+  deviceId   String
+  userAgent  String?
+  createdAt  DateTime @default(now())
+  lastSeenAt DateTime @updatedAt
+  revokedAt  DateTime?
+  user       User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([userId, deviceId])
+  @@index([userId, revokedAt])
 }
 model Course {
   id               String @id @default(cuid())
